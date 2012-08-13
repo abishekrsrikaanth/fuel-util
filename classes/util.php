@@ -18,7 +18,7 @@ abstract class Util {
 		);
 	}
 
-	public static function StringToTitle($title) // Converts $title to Title Case, and returns the result.
+	public static function stringToTitle($title) // Converts $title to Title Case, and returns the result.
 	{
 		// Our array of 'small words' which shouldn't be capitalised if
 		// they aren't the first word. Add your own words to taste.
