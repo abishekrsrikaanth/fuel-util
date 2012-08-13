@@ -4,6 +4,9 @@ namespace Util;
 
 abstract class Util {
 
+	/*
+	 * Returns a Universally Unique Identifier
+	 */
 	public static function getUUID()
 	{
 		return sprintf ('%04x%04x-%04x-%03x4-%04x-%04x%04x%04x',
@@ -18,9 +21,12 @@ abstract class Util {
 		);
 	}
 
-	public static function stringToTitle($title) // Converts $title to Title Case, and returns the result.
+	/*
+	Converts $title to Title Case, and returns the result.
+	*/
+	public static function stringToTitle($title)
 	{
-		// Our array of 'small words' which shouldn't be capitalised if
+		// Array of 'small words' which shouldn't be capitalised if
 		// they aren't the first word. Add your own words to taste.
 		$smallwordsarray = array('of', 'a', 'the', 'and', 'an', 'or', 'nor', 'but', 'is', 'if', 'then', 'else', 'when', 'at', 'from', 'by', 'on', 'off', 'for', 'in', 'out', 'over', 'to', 'into', 'with');
 		// Split the string into separate words
@@ -33,6 +39,9 @@ abstract class Util {
 		} // Join the words back into a string $newtitle = implode(' ', $words); return $newtitle; }
 	}
 
+	/*
+	 * Finds the Time difference for a given time from the current time in words similar to Facebook
+	 */
 	public static function getTimeDifference($time)
 	{
 		$timeDifference = time() - $time;
